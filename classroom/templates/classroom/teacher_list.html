@@ -1,0 +1,25 @@
+<h1>List of Teachers</h1>
+
+{% comment %} {{ form.as_table }} {% endcomment %}
+
+<ul>
+    {% for teacher in teacher_list %}
+        <li>
+            <a href="{% url 'classroom:teacher_detail' teacher.id %}">{{ teacher.first_name }} {{ teacher.last_name }}</a>
+        </li>
+        <ul>
+            <li>
+             <a href="{% url 'classroom:update_teacher' teacher.id %}">Update Information for {{ teacher.first_name }}</a>
+            </li>
+            <li>
+                <a href="{% url 'classroom:delete_teacher' teacher.id %}">Delete  {{ teacher.first_name }} </a>
+               </li>
+        </ul>
+
+        {% comment %} <li>{{ teacher.first_name }} {{ teacher.last_name }}</li> {% endcomment %}
+    {% endfor %}
+
+</ul>
+
+<br>
+<a href="{% url 'classroom:home' %}">Return to home</a>
