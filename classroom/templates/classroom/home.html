@@ -19,10 +19,24 @@
 
         <h1>Welcome home</h1>
 
-        <li>
-            <a href="{% url 'classroom:thank_you' %}">Thank You</a>
-        </li>
-        
+        <ul>
+            <li>
+                <a href="{% url 'classroom:thank_you' %}">Thank You</a>
+            </li>
+
+            <li>
+                <a href="{% url 'classroom:contact' %}">Contact</a>
+            </li>
+
+            <li>
+                <a href="{% url 'classroom:create_teacher' %}">Create Teacher</a>
+            </li>
+
+            <li>
+                <a href="{% url 'classroom:teacher_list' %}">List of Teachers</a>
+            </li>
+        </ul>
+
         <script src="" async defer></script>
     </body>
 </html>
